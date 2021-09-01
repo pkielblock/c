@@ -15,11 +15,11 @@ int main (){
         }
         else if (valor % 2 == 0)
         {
-            par++;
+            par = par + valor;
         }
         else if (valor % 2 != 0)
         {
-            impar++;
+            impar = impar + valor;
         }
     }
 }
