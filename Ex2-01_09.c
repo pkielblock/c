@@ -3,9 +3,7 @@ int main (){
 
     int valor, count, par = 0, impar = 0;
 
-    valor = 1;
-
-    while(valor != 0)
+    while(1)
     {
         scanf("%d", &valor);
 
