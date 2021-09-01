@@ -4,8 +4,12 @@ int main (){
     double peso;
     int destino;
 
-    printf("[1 - Urbano/ 2 - Fora da Cidade]: ");
-    scanf("%d", &destino);
+    do
+    {
+        printf("[1 - Urbano/ 2 - Fora da Cidade]: ");
+        scanf("%d", &destino);
+    } while (destino >= 3 || destino <= 0);
+    
     printf("Digite o Peso: ");
     scanf("%lf", &peso);
 
