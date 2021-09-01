@@ -46,10 +46,6 @@ int main (){
         {
             printf("Correios\n");
         }
-        else if(peso <= 600)
-        {
-            printf("Transportadora\n");
-        }
         else if(peso <= 3000)
         {
             printf("Transportadora\n");
