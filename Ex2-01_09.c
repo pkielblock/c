@@ -1,7 +1,7 @@
 #include<stdio.h>
 int main (){
 
-    int valor, count, par = 0, impar = 0;
+    int valor, par = 0, impar = 0;
 
     while(1)
     {
