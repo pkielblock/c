@@ -4,8 +4,11 @@ int main(){
     int n, i, qtdePos = 0;
     double x, soma = 0, media;
 
-    scanf("%d", &n);
-
+    do
+    {
+        scanf("%d", &n);
+    } while (n <= 0);
+    
     for (i = 0; i < n; i++)
     {
         scanf("%lf", &x);
