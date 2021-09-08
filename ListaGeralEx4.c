@@ -2,6 +2,9 @@
 int main(){
 
     int min, max, i;
+    
+    FILE *arq;
+    arq = fopen("ListaGeralEx4.txt", "w");
 
     do
     {
@@ -19,8 +22,10 @@ int main(){
         if (i % 5 == 0)
         {
             printf("%d\n", i);
+            fprintf(arq, "%d\n", i);
         }   
     }
 
+    fclose(arq);
     return 0;
 }

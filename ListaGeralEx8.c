@@ -4,6 +4,9 @@ int main(){
     int codigo, qtde, totalQtde = 0;
     double precoUnitario, totalValor = 0;
 
+    FILE *arq;
+    arq = fopen("ListaGeralEx8.txt", "w");
+
     scanf("%d", &codigo);
 
     while (codigo != 0)
@@ -33,6 +36,7 @@ int main(){
         else
         {
             printf("Codigo Invalido, Digite Outro Codigo Valido\n");
+            fprintf(arq, "Codigo Invalido, Digite Outro Codigo Valido\n");
         }
         
         if(precoUnitario > 0)
@@ -43,6 +47,7 @@ int main(){
                 if (qtde <= 0)
                 {
                     printf("Qtde Invalida, Digite uma Valida\n");
+                    fprintf(arq, "Qtde Invalida, Digite uma Valida\n");
                 }
                 
             } while (qtde <= 0);
@@ -56,6 +61,9 @@ int main(){
     
     printf("Qtde de Lanches Vendidos: %d\n", totalQtde);
     printf("Valor total arrecadado: %.2lf\n", totalValor);
-    
+    fprintf(arq, "Qtde de Lanches Vendidos: %d\n", totalQtde);
+    fprintf(arq, "Valor total arrecadado: %.2lf\n", totalValor);
+
+    fclose(arq);
     return 0;
 }

@@ -4,6 +4,9 @@ int main(){
     int n, i, qtdePos = 0;
     double x, soma = 0, media;
 
+    FILE *arq;
+    arq = fopen("ListaGeralEx6.txt", "w");
+
     do
     {
         scanf("%d", &n);
@@ -32,6 +35,9 @@ int main(){
     
     printf("Soma dos Numeros Positivos Digitados: %.2lf\n", soma);
     printf("Media dos Numeros Positivos Digitados: %.2lf\n", media);
+    fprintf(arq, "Soma dos Numeros Positivos Digitados: %.2lf\n", soma);
+    fprintf(arq, "Media dos Numeros Positivos Digitados: %.2lf\n", media);
     
+    fclose(arq);
     return 0;
 }
