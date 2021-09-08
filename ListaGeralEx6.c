@@ -21,10 +21,17 @@ int main(){
         
     }
 
-    media = soma / qtdePos;
-
-    printf("Soma dos Numeros Positivos Digitados: %.1lf\n", soma);
-    printf("Media dos Numeros Positivos Digitados: %.1lf\n", media);
+    if (qtdePos > 0)
+    {
+        media = soma / qtdePos;
+    }
+    else
+    {
+        media = 0;
+    }
+    
+    printf("Soma dos Numeros Positivos Digitados: %.2lf\n", soma);
+    printf("Media dos Numeros Positivos Digitados: %.2lf\n", media);
     
     return 0;
 }
