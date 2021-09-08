@@ -39,10 +39,10 @@ int main(){
     
     printf("Soma dos Numeros Positivos Digitados: %.2lf\n", soma);
     printf("Media dos Numeros Positivos Digitados: %.2lf\n", media);
-    printf("Numeros Negativos Digitados: %.2lf", qtdeNeg);
+    printf("Numeros Negativos Digitados: %d", qtdeNeg);
     fprintf(arq, "Soma dos Numeros Positivos Digitados: %.2lf\n", soma);
     fprintf(arq, "Media dos Numeros Positivos Digitados: %.2lf\n", media);
-    fprintf(arq, "Numeros Negativos Digitados: %.2lf", qtdeNeg);
+    fprintf(arq, "Numeros Negativos Digitados: %d", qtdeNeg);
     
     fclose(arq);
     return 0;

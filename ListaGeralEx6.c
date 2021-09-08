@@ -12,9 +12,12 @@ int main(){
         scanf("%d", &n);
     } while (n <= 0);
     
+    fprintf(arq, "N = %d\n\n", n);
+
     for (i = 0; i < n; i++)
     {
         scanf("%lf", &x);
+        fprintf(arq, "X = %.2lf\n", x);
 
         if (x > 0)
         {
@@ -32,7 +35,8 @@ int main(){
     {
         media = 0;
     }
-    
+
+    fprintf(arq, "\nResultados\n");
     printf("Soma dos Numeros Positivos Digitados: %.2lf\n", soma);
     printf("Media dos Numeros Positivos Digitados: %.2lf\n", media);
     fprintf(arq, "Soma dos Numeros Positivos Digitados: %.2lf\n", soma);
