@@ -1,4 +1,5 @@
-# ignore all exes and txts
+*
+!/**/
+!*.*
 *.exe
 *.txt
-*
