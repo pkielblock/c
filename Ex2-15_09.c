@@ -1,20 +1,31 @@
 #include<stdio.h>
+#define tamMax 10
 int main(void)
 {
-    int array[10] = {}, i;
+    int array[tamMax], i, x, tamEfetivo;
 
-    for (i = 0;i <= 9;i++)
-    {
-        printf("Digite o Valor: ");
-        scanf("%d", &array[i]);
-        if (array[i] == 0)
+    i = 0;
+    tamEfetivo = 0;
+
+    printf("Digite o Valor: ");
+    scanf("%d", &x);
+
+    while (tamEfetivo < tamMax && x != 0)
+    {   
+        array[i] = x;
+        tamEfetivo++;
+        if (tamEfetivo < tamMax)
         {
-            printf("Você Digitou 0, Saindo Do Programa.");
-            return 0;
-        } 
+            printf("Digite o Valor: ");
+            scanf("%d", &x);
+        }
+        else
+        {
+            printf("Vetor Totalmente Preenchido\n");
+        }
     }
 
-    for (i = 0;i <= 9;i++)
+    for (i = 0; i < tamEfetivo; i++)
     {
         printf("Array[%d] = %d\n", i, array[i]);
     }

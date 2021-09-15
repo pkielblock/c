@@ -1,20 +1,21 @@
 #include<stdio.h>
-int main(void)
+#define tam 5
+
+int main()
 {
-    int a[5] = {19, 23, 29, 31, 37}, i, count;
+    int a[tam] = {19, 23, 29, 31, 37};
+    int i;
 
-    for(i = 0;i <= 4;i++)
+    printf("Ordem Direta\n");
+    for (i = 0; i < tam; i++)
     {
-        printf("A[%d] = %d\n", i, a[i]);
+        printf("%d ", a[i]);
     }
-    
-    printf("\n");
 
-    count = 4;
-    while(count >= 0)
+    printf("\nOrdem Inversa\n");
+    for (i = tam - 1; i >= 0; i--)
     {
-        printf("A[%d] = %d\n", count, a[count]);
-        count--;
+        printf("%d ", a[i]);
     }
 
     return 0;
