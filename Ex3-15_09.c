@@ -1,7 +1,8 @@
 #include<stdio.h>
+#define max 15
 int main(void)
 {
-    int array[15] = {17, 4, 53, 38, 22, 40, 25, 16, 31, 64, 45, 32, 20, 12, 29};
+    int array[max] = {17, 4, 53, 38, 22, 40, 25, 16, 31, 64, 45, 32, 20, 12, 29};
     int a = 0, i = 0;
 
     do
