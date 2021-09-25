@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 int main(void)
 {
@@ -10,6 +11,7 @@ int main(void)
     printf("Digite o Tamanho do Vetor: ");
     scanf("%d", &n);
 
+    srand(time(NULL));
     array = (int *)(malloc(n * sizeof(int)));
 
     if (array == NULL)
@@ -29,6 +31,7 @@ int main(void)
         printf("Valor armazenado no indice [%d] = %d\n", i, array[i]);
     }
 
+    free(array);
     printf("\nFim Do Programa\n");
     system("pause");
     return 0;

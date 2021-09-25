@@ -41,6 +41,7 @@ int main(void)
         }
     }
 
+    free(array);
     printf("\nFim Do Programa\n");
     system("pause");
     return 0;
