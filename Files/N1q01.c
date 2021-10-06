@@ -10,6 +10,7 @@ int main(){
     printf("1680482112029\n");
     printf("Henrique Ernandes Rebelo\n");
     printf("1680482112038\n");
+    printf("Questao 1\n");
 
     do
     {
