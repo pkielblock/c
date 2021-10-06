@@ -1,68 +1,51 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <math.h>
 
-int main(){
-
-    int min, max, i = 0, cont = 0, somaPrimos = 0, contPrimos = 0, resto;
-    double raiz;
-
+int main()
+{
     printf("Pedro Henrique Sampaio Kielblock\n");
     printf("1680482112029\n");
     printf("Henrique Ernandes Rebelo\n");
     printf("1680482112038\n");
     printf("Questao 3\n");
-
-    do
-    {
-        printf("Min: ");
-        scanf("%d", &min);
-    } while (min <= 1);
     
-    do
-    {
-        printf("Max: ");
-        scanf("%d", &max);
-    } while (max <= min);
-
-    for (i = min; i <= max; i++)
-    {
-        if (i == 2)
-        {
-            printf("%d\n", i);
-            contPrimos++;
-            somaPrimos += i;
+    int min = 0, max = 0, i, j, soma = 0, qnt = 0, res;
+    
+    
+    while(min <= 1){
+        printf("Min = ");
+        scanf("%d",&min);
+        if(min <= 1){
+            printf(" Minimo invalido\n");
         }
-        else if (i % 2 == 0)
-        {   
-            
-        }
-        else
-        {
-            raiz = sqrt(i);
-            cont = 3;
-            while (cont <= raiz && resto != 0)
-            {
-                resto = i % cont;
-                cont = cont + 2;
-            }
-            if (resto == 0)
-            {
-
-            }
-            else
-            {
-                printf("%d\n", i);
-                contPrimos++;
-                somaPrimos += i;
-            }
+    }
+    while(max <= min){
+        printf("Max = ");
+        scanf("%d",&max);
+        if(max <= min){
+            printf(" Maximo invalido\n");
         }
     }
     
-    printf("Quantidade de primos no intervalo[%d, %d] = %d\n", min, max, contPrimos);
-    printf("Soma dos primos no intervalo[%d, %d] = %d", min, max, somaPrimos);
-
-    printf("\n\nFim do Programa\n\n");
-    system("pause");
+    for(i = min; i <= max; i++){
+        res = 0;
+        for(j = 2; j < i; j++){
+            if(i % j == 0){
+                res = 1;
+            }
+        }
+        if(!res){
+            printf("%d \n",i);
+            qnt++;
+            soma += i;
+        }
+    }
+    
+    printf("Quantidade de primos no intervalo[%d, %d] = %d \n",min , max, qnt);
+    printf("Soma dos primos no intervalo[%d, %d] = %d \n",min , max, soma);
+    
+ 
+    printf("\n");
     return 0;
 }
+
