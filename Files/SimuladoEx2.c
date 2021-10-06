@@ -1,69 +1,54 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
+#include<stdio.h>
+#include<stdlib.h>
 
-int main(void)
-{
-    int n , i = 0;
+int main() {
+  int N, i, j;
+  
+  printf("Digite N: ");
+  scanf("%d", &N);  
+  while ( N%2 != 0 || N < 6 || N > 32 ) {
+    printf("O numero %d é invalido\n\n", N);
+    printf("Digite N: ");
+    scanf("%d", &N);  
+  }
+  
+  // linha 1
+  printf(" ");
+  for (i = 0; i < N - 2; i++)
+    printf("*");
+  printf("\n");
+  // linha 2
+  for (i = 0; i < N; i++)
+    printf("*");
+  printf("\n");
 
-    do
-    {
-        printf("Entrada: N = ");
-        scanf("%d", &n);
-
-        if (n % 2 != 0 || n < 6 || n > 32)
-        {
-            printf("O numero %d e invalido\n", n);
-        }
-    } while (n % 2 != 0 || n < 6 || n > 32);
-    
-
-    printf("Saida\n");
-
-
-    //Cima 1
-    for (i = 0; i < n - 3; i++)
-    {
-        printf(" ");
-
-        for (i = 0; i < n - 2; i++)
-        {
-            printf("*");
-        }
-    }
-
-    printf("\n");
-
-    //Cima 2
-    for (i = 0; i < n; i++)
-    {
-        printf("*");
-    }
-    
-    printf("\n");
-
-    //Nao consegui fazer o Meio
-    
-    //Baixo 1
-    for (i = 0; i < n; i++)
-    {
-        printf("*");
-    }
-    
-    printf("\n");
-
-    //Baixo 2
-    for (i = 0; i < n - 3; i++)
-    {
-        printf(" ");
-
-        for (i = 0; i < n - 2; i++)
-        {
-            printf("*");
-        }
-    }
-
-    //printf("\n\nFim Do Programa\n\n");
-    //system("pause");
-    return 0;
+  // linhas de 3 até N-2
+  for (j = 3; j <= N-2; j++) {
+    printf("**");
+    for (i = 2; i < N-2; i++)
+      printf(" ");
+    printf("**\n");
+  }
+  
+  // linha N-1
+  for (i = 0; i < N; i++)
+    printf("*");
+  printf("\n");
+  // linha N
+  printf(" ");
+  for (i = 0; i < N - 2; i++)
+    printf("*");
+  printf("\n");
+  
+  printf("\n\nFim do programa");
+  return 0;
 }
+
+
+
+
+
+
+
+
+
