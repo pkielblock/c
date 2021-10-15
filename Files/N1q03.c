@@ -44,8 +44,8 @@ int main()
     printf("Quantidade de primos no intervalo[%d, %d] = %d \n",min , max, qnt);
     printf("Soma dos primos no intervalo[%d, %d] = %d \n",min , max, soma);
     
- 
-    printf("\n");
+    printf("\n\nFim do Programa\n\n");
+    system("pause");
     return 0;
 }
 

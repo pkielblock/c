@@ -65,7 +65,8 @@ int main(){
             totalAtacado += precoAtacado * qv;
         }
         else{
-            printf("Codigo Invalido");
+            printf("Codigo Invalido\n");
+            i--;
         }
         
         total = (totalVarejo + totalAtacado);
