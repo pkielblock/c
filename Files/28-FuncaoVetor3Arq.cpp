@@ -1,4 +1,4 @@
-#include<stdio.h>
+#include<stdio.h>//voltei ta com
 #include<stdlib.h>
 #include<time.h>
 #include <stdbool.h>
