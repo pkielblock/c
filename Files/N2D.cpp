@@ -101,7 +101,7 @@ int main()
       }
       if(valIR <= 10)
 	  {
-      	valIR = 0;
+            valIR = 0;
 	  }
       printf("%.2lf 	%.2lf	 	%.2lf		%.2lf		%.2lf		%.2lf		%.2lf", salBruto, aliqINSS * 100, valINSS, salLiquido, aliqIR * 100, valIR, salLiquido - valIR);
       fprintf(calculos, "%.2lf 	%.2lf	 	%.2lf		%.2lf		%.2lf		%.2lf		%.2lf", salBruto, aliqINSS * 100, valINSS, salLiquido, aliqIR * 100, valIR, salLiquido - valIR);
