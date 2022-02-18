@@ -1,2 +1,4 @@
 *.exe
 *.txt
+CMakeLists.txt
+*/bin
