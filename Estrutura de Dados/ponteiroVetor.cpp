@@ -3,7 +3,7 @@
 int main(){
 	int vet[4]={1,2,3,4};
 	int i;
-	printf("Endereço do &vet=%u\n",vet);
+	printf("Endereco do &vet=%u\n",vet);
 	int *pv;//ponteiro do tipo inteiro
 
 	pv=vet; //pv=&vet[0]
