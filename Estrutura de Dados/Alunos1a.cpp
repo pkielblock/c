@@ -8,7 +8,7 @@ typedef struct{
 
 int main(){
 	Aluno *P, *PA;
-	P=(Aluno*)malloc(sizeof(Aluno)*3);//espaço para 3 alunos
+	P=(Aluno*)malloc(sizeof(Aluno)*3);//espaï¿½o para 3 alunos
 	PA=P;//PA ponteiro auxiliar 
 	int i;
 	for(i=0;i<3;i++){
@@ -18,8 +18,9 @@ int main(){
 	}
 	system("cls");
 	printf("Matricula    Nota\n");
-	//restara o ponteiro para a posição inicial 
-	for(P=PA,i=0;i<3;i++,P++)
-	   printf("%9d - %5.2f\n", P->RA, P->nota);
-	   //printf("%9d - %5.2f\n", (*P).RA, (*P).nota);
+	//restara o ponteiro para a posiï¿½ï¿½o inicial 
+	for(P=PA,i=0;i<3;i++,P++) {
+		printf("%9d - %5.2f\n", P->RA, P->nota);
+	}   
+	//printf("%9d - %5.2f\n", (*P).RA, (*P).nota);
 }

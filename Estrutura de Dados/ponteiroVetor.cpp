@@ -9,12 +9,14 @@ int main(){
 	pv=vet; //pv=&vet[0]
 	printf("Endereco contido em pv=%u\n",pv);
 	printf("Vetor\n");
-	for(i=0; i<4; i++, pv++)
-	   printf("%d - %d\n",*pv, pv);
+	for(i=0; i<4; i++, pv++) {
+		printf("%d - %d\n",*pv, pv);
+	}  
 	printf("\n");
 	/*
-	for(i=0;i<4;i++)
-	   printf("%d - %d\n",pv[i], &pv[i]);
+	for(i=0;i<4;i++) {
+		printf("%d - %d\n",pv[i], &pv[i]);
+	}
 	printf("\n");
 	*/
 	printf("Endereco contido em pv=%u\n",pv);

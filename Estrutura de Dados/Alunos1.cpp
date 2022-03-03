@@ -15,6 +15,7 @@ int main(){
 	}
 	system("cls");
 	printf("Matricula    Nota\n");
-	for(i=0;i<3;i++)
-	   printf("%9d - %5.2f\n", P[i].RA, P[i].nota);
+	for(i=0;i<3;i++) {
+		printf("%9d - %5.2f\n", P[i].RA, P[i].nota);
+	}
 }
