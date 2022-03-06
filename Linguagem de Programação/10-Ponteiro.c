@@ -20,7 +20,7 @@ int main(void)
     printf("Utilizando Ponteiros\n\n");
     printf("Conteudo da variavel valor: %d\n", valor);
     printf("Endereco da variavel valor: %x\n", &valor);
-    printf("Conteudo da varaivavel ponteiro: %x", ponteiro);
+    printf("Conteudo da variavel ponteiro: %x", ponteiro);
 
     getch();
 	printf("\nFim do Programa\n");
