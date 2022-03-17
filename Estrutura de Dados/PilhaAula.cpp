@@ -1,13 +1,13 @@
 //pilha com vetor
 #include <stdio.h>
 #include <stdlib.h>
-#include "pilha1.h"
+#include "pilha.h"
 
 int conta (Pilha *p){
 	int cont=0;//contador de elementos
 	Pilha *aux=pilha_cria();//cria pilha auxiliar para movimentar os dados
 	float v;
-	while(pilha_vazia(p)==0){//enquanto a pilha p não estiver vazia
+	while(pilha_vazia(p)==0){//enquanto a pilha p nï¿½o estiver vazia
 	  v=pilha_pop(p);
 	  cont++;
 	  pilha_push(aux,v);//coloca o elemento retirado na pilha auxiliar
@@ -25,7 +25,7 @@ float soma (Pilha *p){
 	float s=0;//acumulador de elementos
 	Pilha *aux=pilha_cria();//cria pilha auxiliar para movimentar os dados
 	float v;//usado para retirar elementos da pilha
-	while(pilha_vazia(p)==0){//enquanto a pilha p não estiver vazia
+	while(pilha_vazia(p)==0){//enquanto a pilha p nï¿½o estiver vazia
 	  v=pilha_pop(p);
 	  s=s+v;//acumula o valor dos elementos contidos na pilha
 	  pilha_push(aux,v);//coloca o elemento retirado na pilha auxiliar
@@ -95,7 +95,7 @@ main(){
                 pilha_push(pi,item);
                 break;
         case 2 : //retira
-               if(pilha_vazia(pi))//verifica antes se está vazia
+               if(pilha_vazia(pi))//verifica antes se estï¿½ vazia
                    printf("Pilha vazia.\n");
                else
                    printf("Elemento retirado = %.0f\n",pilha_pop(pi));
