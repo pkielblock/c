@@ -40,6 +40,14 @@ int ultimoLista(Lista *lst)
 	return ultimo;
 }
 
+int primeiroLista(Lista *lst)
+{
+	int primeiro;
+	
+	primeiro = lst->info;
+	
+	return primeiro;	
+}
 
 //programa principal
 void menu(){
@@ -53,6 +61,7 @@ void menu(){
      printf("5. Conta elementos\n"); 	 //int contaElementos(Lista *lst)
      printf("6. Soma Elementos\n"); 	 //int somaElementos(Lista *lst)
      printf("7. Ultimo da Lista\n"); 	 //int ultimoLista(Lista *lst)
+	 printf("8. Primeiro da Lista\n");   //int primeiroLista(Lista *lst)
 	 printf("9. Fim\n");
      printf("==> ");
 }
@@ -62,21 +71,25 @@ void menu(){
 main(){
   int opmenu, item;
   Lista *li=lista_cria();//inicializa a lista com NULL
-  Lista *aux;//ponteiro auxiliar - necess√°rio para a busca
+  Lista *aux;//ponteiro auxiliar - necess·rio para a busca
   do{
      menu();   
      scanf("%d",&opmenu);
      switch(opmenu){
         case 1: //insere
-               printf("Informe o item que deseja adicionar: ");
-               scanf("%d",&item);
-               li=lista_ordenada(li,item);
-               break;
+                printf("Informe o item que deseja adicionar: ");
+                scanf("%d",&item);
+            	if(lista_busca(li,item)){
+			 		printf("Item Duplicado");
+			 	} else {
+             		li=lista_ordenada(li,item);
+			 	}
+             	break;
         case 2:  //retira
              printf("Informe o item que deseja retirar: ");
              scanf("%d",&item);
-             li=lista_retira(li,item); 
-             break;
+             li=lista_retira(li,item);
+			 break;
         case 3://mostra
 		    if(lista_vazia(li))
 			   printf("Lista vazia\n");
@@ -113,6 +126,13 @@ main(){
         			printf("Lista vazia\n");
 				} else {
 					printf("Ultimo dos Elementos: %d", ultimoLista(li));
+				}
+				break;
+		case 8: //primeiro
+				if(lista_vazia(li)){
+        			printf("Lista vazia\n");
+				} else {
+					printf("Primeiro dos Elementos: %d", primeiroLista(li));
 				}
 				break;
         }//fim switch

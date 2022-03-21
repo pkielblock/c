@@ -82,7 +82,7 @@ Lista* lista_ordenada(Lista* ls, int v) {
     {
          novo->prox=ant->prox;
          ant->prox=novo;
-     }
+    }
      return ls;
 } 
 
