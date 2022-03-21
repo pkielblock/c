@@ -62,7 +62,7 @@ void menu(){
 main(){
   int opmenu, item;
   Lista *li=lista_cria();//inicializa a lista com NULL
-  Lista *aux;//ponteiro auxiliar - necess·rio para a busca
+  Lista *aux;//ponteiro auxiliar - necess√°rio para a busca
   do{
      menu();   
      scanf("%d",&opmenu);
@@ -70,7 +70,7 @@ main(){
         case 1: //insere
                printf("Informe o item que deseja adicionar: ");
                scanf("%d",&item);
-               li=lista_insere(li,item);
+               li=lista_ordenada(li,item);
                break;
         case 2:  //retira
              printf("Informe o item que deseja retirar: ");
