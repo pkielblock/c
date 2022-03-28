@@ -25,8 +25,7 @@ void mostrar_vizinhos(Lista2* lst, int item)
 	//ant
 	if(aux->ant != NULL)
 	{
-		aux = aux->ant;
-		printf("Anterior: %d\n", aux->info);
+		printf("Anterior: %d\n", aux->ant->info);
 		aux = aux->prox;
 	} else {
 		printf("Anterior: Ninguem\n");
@@ -35,8 +34,7 @@ void mostrar_vizinhos(Lista2* lst, int item)
 	//prox
 	if(aux->prox != NULL)
 	{
-		aux = aux->prox;
-		printf("Proximo: %d\n", aux->info);
+		printf("Proximo: %d\n", aux->prox->info);
 	} else {
 		printf("Proximo: Ninguem\n");
 	}
