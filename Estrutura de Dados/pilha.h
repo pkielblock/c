@@ -40,6 +40,6 @@ void pilha_libera(Pilha *p){
 void pilha_mostra(Pilha *p) {
      printf("Conteudo da pilha\n");
      for(int i=p->n-1;i>=0;i--)
-         printf("%.0f\n",p->vet[i]);
+         printf("%.2f\n",p->vet[i]);
      printf("\n");
 } 

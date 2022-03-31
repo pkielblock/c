@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "pilha.h"
 
-int conta (Pilha *p){
+float conta (Pilha *p){
 	int cont=0;//contador de elementos
 	Pilha *aux=pilha_cria();//cria pilha auxiliar para movimentar os dados
 	float v;
@@ -22,7 +22,7 @@ int conta (Pilha *p){
 }
 //---------------------------------------------------
 float soma (Pilha *p){
-	float s=0;//acumulador de elementos
+	int s=0;//acumulador de elementos
 	Pilha *aux=pilha_cria();//cria pilha auxiliar para movimentar os dados
 	float v;//usado para retirar elementos da pilha
 	while(pilha_vazia(p)==0){//enquanto a pilha p n�o estiver vazia
@@ -50,7 +50,7 @@ void base(Pilha *s){
 			b=pilha_pop(s);
 			pilha_push(a,b);
 		}
-		printf("Base: %.0f\n",b);
+		printf("Base: %.2f\n",b);
 		//restaura a pilha original
 		while(!pilha_vazia(a))
 	  		pilha_push(s,pilha_pop(a));
@@ -64,7 +64,7 @@ void topo(Pilha *s){
 	else{
 	   topo=pilha_pop(s);
 	   pilha_push(s,topo);
-	   printf("Topo: %.0f\n", topo);
+	   printf("Topo: %.2f\n", topo);
 	}
 }
 //----------------------------------------------
@@ -98,7 +98,7 @@ main(){
                if(pilha_vazia(pi))//verifica antes se est� vazia
                    printf("Pilha vazia.\n");
                else
-                   printf("Elemento retirado = %.0f\n",pilha_pop(pi));
+                   printf("Elemento retirado = %.2f\n",pilha_pop(pi));
                break;
         case 3 : //mostra
                 if(pilha_vazia(pi))
@@ -110,7 +110,7 @@ main(){
                printf("Numero de elementos: %d\n", conta(pi));
                break;
         case 5:// soma elementos
-               printf("Soma dos elementos: %.0f\n", soma(pi));
+               printf("Soma dos elementos: %.2f\n", soma(pi));
                break;
 		case 6:// mostra a base
                base(pi);
