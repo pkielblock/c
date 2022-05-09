@@ -3,9 +3,9 @@
 int main()
 {
 	FILE *arq;
-	double num;
+	double num, saida;
 	int i = 0;
-	arq = fopen("NumBin", "w");
+	arq = fopen("NumBin.bin", "wb");
 	
 	if (arq == NULL)
 	{
@@ -16,19 +16,18 @@ int main()
 	do {
 		printf("Digite um Numero: ");
 		scanf("%lf", &num);
-		fprintf(arq, "%.2lf", num);
-		fprintf(arq, "\n");
+		fwrite(&num, sizeof(double), 1, arq);
 		i++;
 	} while (i < 10);
 	
 	fclose(arq);
-	arq = fopen("NumBin", "r");
+	arq = fopen("NumBin.bin", "rb");
 	
 	printf("\n\n");
 	
-	while(fscanf(arq, "%lf", &num) != EOF)
+	while(fread(&saida, sizeof(double), 1, arq) == 1)
 	{
-		printf("%.2lf\n", num);
+		printf("%.2lf\n", saida);
 	}
 	
 	fclose(arq);
