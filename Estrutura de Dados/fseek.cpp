@@ -27,7 +27,6 @@ int main()
 	
 	fp = fopen("vetBin.bin", "a+b");
 	fwrite(num, sizeof(int), 20, fp);//gravacao em binario
-	fseek(fp,-5*sizeof(int), SEEK_END); //SEEK_CUR ou SEEK_SET
 	
 	rewind(fp);
 	printf("\nVetor resultante\n");
