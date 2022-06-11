@@ -14,19 +14,19 @@ Arv*  abb_cria(){
       return NULL;
 }
 
-//verifica se a arvore está vazia
+//verifica se a arvore estï¿½ vazia
 int abb_vazia(Arv* a){
     return a == NULL;
 }
 
-//insere elemento - versão interativa
-Arv  *abb_insere(Arv* a,int c){
+//insere elemento - versï¿½o interativa
+Arv  *abb_insere(Arv* a, int c){
      Arv *p,*q,*r;
      p=(Arv*)malloc(sizeof(Arv));
      p->info = c;
      p->esq = p->dir = NULL;
 
-     if (abb_vazia(a))//primeiro elemento da árvore
+     if (abb_vazia(a))//primeiro elemento da ï¿½rvore
          a=p;
      else
      {
@@ -140,12 +140,12 @@ void abb_impar(Arv *t)
 int main(){
   int num;
   Arv *a=abb_cria();
-   //insere elementos na abb até que um valor negativo seja digitado
+   //insere elementos na abb atï¿½ que um valor negativo seja digitado
   do{
      printf("Entre com o valor a ser inserido, ou -1 para finalizar:\n");
      scanf("%d", &num);
      if(num>=0)
-        a=abb_insere(a,num);//inserção em ordem abb
+        a=abb_insere(a,num);//inserï¿½ï¿½o em ordem abb
      }while(num>=0);
      
    printf("Percurso em ordem\n");
