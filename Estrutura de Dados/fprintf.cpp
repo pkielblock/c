@@ -6,7 +6,7 @@ int main()
 	FILE *fp;
 	char frase[] = "Fatec Sao Caetano";
 	fp=fopen("saida.txt","wt");
-	for(inti=0; frase[i]!='\0';i++){
+	for(int i=0; frase[i]!='\0';i++){
 		fprintf(fp,"%c", frase[i]);
 	}
 	fclose(fp);
