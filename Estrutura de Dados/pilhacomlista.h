@@ -1,5 +1,8 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 typedef struct lista {
-   float info;//informação mantida na pilha
+   float info;//informaï¿½ï¿½o mantida na pilha
    lista *prox;
 }Lista;
 
@@ -14,7 +17,7 @@ Pilha *pilha_cria(void){
 }
 
 void pilha_push(Pilha *p, float v) {
-     Lista *n = (Lista*) malloc (sizeof(Lista));//aloca espaço para o item da pilha 
+     Lista *n = (Lista*) malloc (sizeof(Lista));//aloca espaï¿½o para o item da pilha 
      n->info=v;                              //e liga com o anterior
      n->prox =p->topo;
      p->topo=n;//troca o inicio da pilha pelo item recem adicionado

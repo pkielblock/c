@@ -1,7 +1,10 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 int main()
 {
 	FILE *fp;
-	char frase[]="Programação em Linguagem C ";
+	char frase[]="Programaï¿½ï¿½o em Linguagem C ";
 	char endline='\n';
 	fp=fopen("saida3.txt","wt");
 	fputs(frase,fp);
