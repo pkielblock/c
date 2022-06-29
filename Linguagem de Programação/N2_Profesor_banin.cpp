@@ -22,10 +22,10 @@ struct Arquivos_das_vendas{
 	double media_das_vendas;
 	double contribuicao_das_vendas;
 };
-//Void de exibição das informacoes e resultados de calculos
+//Void de exibiÃ§Ã£o das informacoes e resultados de calculos
 void Exibindo_Total_por_Dia(Arquivos_das_vendas *pV, int pTam, FILE *TOTVENDAS);
 void Exibindo_Total_Total_de_Prododutos(Arquivos_das_vendas *pV, int pTam, FILE *TOTVENDAS);
-//int´s para separar e ordenar por data e codigo
+//intÂ´s para separar e ordenar por data e codigo
 int data_ja_existe(int pDia, int pMes, int pAno, Arquivos_das_vendas *pV, int pTam);
 int cod_ja_existe(int pCod, Arquivos_das_vendas *pV, int pTam);
 
@@ -57,10 +57,6 @@ int main(void){
 	FILE *TOTVENDAS;
 	FILE *arq_para_Produto;
 	FILE *arq_de_Venda; 
-	
-	//nomes dos integrantes
-	printf("Raphael dos santos freitas\n");
-	printf("isaque gabriel");
 	
 	//abrindo arquivo Produtos.txt
 	arq_para_Produto = fopen("PRODUTOS.txt", "r");
@@ -120,7 +116,7 @@ int main(void){
 		}
 	}
 	
-	// Abrindo ou criando arquivo para ser gravado as informações
+	// Abrindo ou criando arquivo para ser gravado as informaÃ§Ãµes
 	TOTVENDAS = fopen("TOTVENDAS.TXT", "w");
 	
 	Exibindo_Total_por_Dia (vendas_totais_por_Datas, tamanho_Total_da_Data, TOTVENDAS);
@@ -189,7 +185,7 @@ int main(void){
 	for (i=0; i<tamanho_Total_da_Data; i++){
 		vendas_totais_por_Datas[i].contribuicao_das_vendas = (vendas_totais_por_Datas[i].total_das_vendas/Total_Geral_de_vendas)*100;
 	}
-	//ordenando por contribuição
+	//ordenando por contribuiÃ§Ã£o
 	do {
 		Trocou = false;
 		for (i=0; i<tamanho_Total_da_Data-1; i++){
@@ -202,7 +198,7 @@ int main(void){
 		}
 	} while (Trocou);
 	
-	fprintf (TOTVENDAS, "\nCONTRIBUIÇAO DE CADA PRODUTO\n");
+	fprintf (TOTVENDAS, "\nCONTRIBUIÃ‡AO DE CADA PRODUTO\n");
 	fprintf (TOTVENDAS, "Prod.      VlrTot      Contrib.\n");
 	for (i=0; i<tamanho_Total_da_Data; i++){
 		fprintf (TOTVENDAS, "%d %11.2lf %11.1lf%%\n", vendas_totais_por_Datas[i].cod_das_Vendas, vendas_totais_por_Datas[i].total_das_vendas, vendas_totais_por_Datas[i].contribuicao_das_vendas);
